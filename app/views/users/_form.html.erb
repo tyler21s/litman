@@ -41,6 +41,11 @@
     <%= form.select :status,["active","inactive"] %>
   </div>
 
+   <div class="field">
+    <%= form.label :nickname %>
+    <%= form.text_field :nickname %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

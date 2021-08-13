@@ -6,5 +6,5 @@ class User < ApplicationRecord
    enum status: [ :active, :inactive ]
    validates :status, inclusion: { in: %w(active inactive),
     message: "%{value} is not a valid size" }
-    has_many :article
+    has_many :articles
 end

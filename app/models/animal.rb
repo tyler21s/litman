@@ -8,6 +8,7 @@ class Animal < ApplicationRecord
   def self.push_remote
     require 'httparty'
     @response = HTTParty.get("https://axoltlapi.herokuapp.com/")
+    @response = JSON.parse(@response.body)
     result = HTTParty.post('http://requestbin.net/r/6cy069o6',@response)
   end
 end
